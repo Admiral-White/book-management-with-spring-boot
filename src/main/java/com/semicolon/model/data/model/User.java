@@ -1,7 +1,9 @@
 package com.semicolon.model.data.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,8 +11,9 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
+@NoArgsConstructor
 public class User implements Serializable {
     
     @Id
@@ -31,6 +34,7 @@ public class User implements Serializable {
 
     @Column(name = "Email", nullable = false, unique = true)
     private String email;
+
 
 //    // default constructor used to facilitate data binding
 //    public User() {

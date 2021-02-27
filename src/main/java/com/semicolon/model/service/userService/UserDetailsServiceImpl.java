@@ -2,6 +2,7 @@ package com.semicolon.model.service.userService;
 
 import com.semicolon.model.data.model.User;
 import com.semicolon.model.data.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

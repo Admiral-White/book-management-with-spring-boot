@@ -3,6 +3,7 @@ package com.semicolon.model.security.webSecurity;
 import com.semicolon.model.security.userConfig.JWTAuthenticationFilter;
 import com.semicolon.model.security.userConfig.JWTAuthorizationFilter;
 import com.semicolon.model.service.userService.UserDetailsServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -20,7 +21,10 @@ import static com.semicolon.model.security.securityConstants.SecurityConstants.S
 @EnableWebSecurity
 public class WebSecurity  extends WebSecurityConfigurerAdapter {
 
+    @Autowired
     private UserDetailsServiceImpl userDetailsService;
+
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public WebSecurity(UserDetailsServiceImpl userService, BCryptPasswordEncoder bCryptPasswordEncoder) {

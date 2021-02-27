@@ -15,6 +15,7 @@ VALUES (31, '098-234-123', 'the battle for life', '21'),
        (37, '101-234-897', 'Life in Semicolon', '23');
 
 insert into user(`id`, `First_Name`, `Last_Name`, `Email`, `Password`, `Username`)
-values (1, 'debby', 'okon', 'debbyokon@yahoo.com', 'destinybaby', 'debbykings');
+values (1, 'debby', 'okon', 'debbyokon@yahoo.com', MD5('destinybaby'), 'debbykings'),
+        (2, 'Moses', 'Elliot', 'moses@yahoo.com', MD5('amazing'), 'moseselite');
 
 SET FOREIGN_KEY_CHECKS  = 1;
